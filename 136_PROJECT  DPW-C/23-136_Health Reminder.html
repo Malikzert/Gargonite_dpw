@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Reminder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body class="bg-info p-4">
+<div class="container bg-secondary ">
+    <fieldset class="bg-light p-3">
+        <h1 class="text-bg-success text-center">Health Reminder</h1>
+        <p class="fw-bold text-danger">*Isi formulir ini berdasarkan aktivitas Anda dalam SATU HARI :
+            <br>*pengingat akan tampil jika kurang sesuai menurut kesehatan.
+        </p><br>
+        <form id="health-form">
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <div class="form-group ">
+                        <label for="gender">Jenis kelamin:</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <input type="radio" id="lakilaki" name="gender" value="lakilaki" required><label for="lakilaki" class="me-3">Laki-Laki</label>
+                        <input type="radio" id="perempuan" name="gender" value="perempuan" required><label for="perempuan">Perempuan</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="usia">Usia (tahun):</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="usia" min="1" max="70" placeholder="Minimal umur 1 tahun, maximal 70 tahun" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="tidur">Waktu tidur (Jam):</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="tidur" min="0" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="air">Minum air putih (Mili_liter):</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="air" min="0" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="langkah">Jumlah jalan kaki (langkah):</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="langkah" min="0" placeholder="Abaikan jika Usia < 8 tahun" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="olahraga">Waktu Olahraga (Menit):</label>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="form-group">
+                        <input type="number" class="form-control" id="olahraga" min="0" placeholder="Abaikan jika Usia < 8 tahun" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div class="form-group mt-3 ">
+                        <button type="submit" class="btn btn-success ">Cek Kondisi</button>
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </div>
+                </div>
+            </div>      
+            <div id="reminder"></div>
+            <div class="row mt-3">
+                <div class="col">
+                    <p class="text-muted">Referensi diambil: <a href="https://www.alodokter.com/memenuhi-waktu-tidur-yang-ideal-demi-kesehatan" target="_blank">alodokter</a> , <a href="https://www.rri.co.id/index.php/kesehatan/610992/kebutuhan-air-minum-menurut-usia" target="_blank">rri kesehatan</a> , <a href="https://www.sehataqua.co.id/waktu-minimal-olahraga/" target="_blank">sehataqua</a>, <a href="https://www.alomedika.com/10000-langkah-perlukah-sebanyak-itu" target="_blank">alomedika</a> .</p>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
